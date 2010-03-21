@@ -9,7 +9,11 @@
   :version "0.1"
   :maintainer "Manuel Odendahl <wesen@ruinwesen.com>"
   :serial t
-  :depends-on (:cl-gd :uffi :cocoahelper :lispbuilder-sdl :unit-test :cl-pdf :cxml :cl-ppcre)
+  :depends-on (#+nil :cl-gd
+	       :uffi
+	       #+nil :cocoahelper
+	       #+nil :lispbuilder-sdl
+	       :unit-test :cl-pdf :cxml :cl-ppcre)
   :components
   (
    ;; thirdparty
@@ -25,7 +29,7 @@
    (:file "geometry")
    (:file "arc")
    (:file "bezier")
-   (:file "offset")
+;;   (:file "offset")
 
    ;; potrace externals
    (:file "pot-uffi")
@@ -35,7 +39,7 @@
    (:file "opcodes")
 
    ;; tracer
-   (:file "potrace")
+;;   (:file "potrace")
 
    ;; panelizing and stuff
    (:file "shapes")
@@ -43,7 +47,7 @@
    (:file "panel")
    (:file "cube")
 
-   (:file "raster")
+  ;; (:file "raster")
 
    ;; optimizer
    (:file "optimize")
@@ -52,9 +56,11 @@
    (:file "drill")
 
    ;; formats and exporters and importers
-   (:file "sdl")
+   #+nil(:file "sdl")
    (:file "p5")
    (:file "pdf")
    (:file "svg")
+
+   (:file "minicommand")
 
    ))
