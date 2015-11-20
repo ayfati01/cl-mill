@@ -1,0 +1,1 @@
+CL-MILL is a CNC milling application generating G-Code, built in Common Lisp. I use this for all my CNC work, hope you find it useful or so.
